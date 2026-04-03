@@ -1,4 +1,4 @@
-import { Service, Characteristic, CharacteristicEventTypes } from 'homebridge';
+import { Service, Characteristic } from 'homebridge';
 
 // https://developers.homebridge.io/#/characteristic/LockPhysicalControls
 export function add(

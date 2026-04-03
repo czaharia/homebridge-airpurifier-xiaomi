@@ -1,4 +1,4 @@
-import { Service, Characteristic, CharacteristicEventTypes } from 'homebridge';
+import { Service, Characteristic } from 'homebridge';
 import { MODE } from '../../miio-consts';
 
 // http://miot-spec.org/miot-spec-v2/instance?type=urn:miot-spec-v2:device:air-purifier:0000A007:zhimi-ma4:1
@@ -27,7 +27,6 @@ export function add(
     })
     .onSet(async (speed) => {
       const device = await maybeDevice;
-      console.log(device);
       // If the device isn't in manual mode change it first
       if ((await device.mode()) !== MODE.NONE) {
         await device.changeMode(MODE.NONE);
