@@ -35,8 +35,6 @@ Note that it might be neccessary to enter the search string inside double quotes
 
 Configure the plugin in the GUI / [Homebridge Config UI X](https://github.com/oznu/homebridge-config-ui-x) (highly recommended), otherwise head over to [Manual Config](#manual-config)
 
- <img title="Settings: Xiaomi Mi Air Purifier" src="../assets/media/settings-xiaomi-mi-air-purifier.png" width="726">
-
 ### Getting a Token
 
 Use [Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor) to get a token for your device.
