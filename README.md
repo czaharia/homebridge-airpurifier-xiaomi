@@ -56,7 +56,7 @@ Add this to your homebridge config.json file.
       "filterChangeThreshold": 5,
       "enableFanSpeedControl": true,
       "enableChildLockControl": true,
-      "accessory": "XiaomiMiAirPurifier"
+      "accessory": "XiaomiMiAirPurifierV2"
     }
   ]
 }

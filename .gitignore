@@ -1,3 +1,6 @@
+.husky
+.vscode
+
 test.js
 
 # Ignore compiled code
