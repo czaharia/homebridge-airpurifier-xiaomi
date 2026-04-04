@@ -1,7 +1,7 @@
 {
   "displayName": "Homebridge Air Purifier Xiaomi Mi",
   "name": "homebridge-airpurifier-xiaomi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Homebridge plugin for Xiaomi Mi Air Purifier (fork with Homebridge v2 support)",
   "license": "Apache-2.0",
   "private": false,
@@ -10,7 +10,7 @@
     "url": "https://github.com/czaharia/homebridge-airpurifier-xiaomi"
   },
   "engines": {
-    "node": "^18.20.4 || ^20.15.1 || ^22",
+    "node": ">=20",
     "homebridge": "^1.6.0 || ^2.0.0-beta.0"
   },
   "main": "dist/index.js",

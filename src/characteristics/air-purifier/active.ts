@@ -1,4 +1,5 @@
 import { Service, Characteristic } from 'homebridge';
+import { MODE } from '../../miio-consts';
 
 // https://developers.homebridge.io/#/characteristic/Active
 export function add(
@@ -20,11 +21,16 @@ export function add(
       const device = await maybeDevice;
       return (await device.power()) ? ACTIVE : INACTIVE;
     })
-    .onSet(async function (this: Characteristic, newStatus) {
+    .onSet(async (value) => {
       const device = await maybeDevice;
-      const currentStatus = await device.power();
-      if (currentStatus !== newStatus) {
-        await device.changePower(newStatus);
+      if (value === ACTIVE) {
+        await device.setPower(true);
+        // Switch to Auto mode on power on
+        if ((await device.mode()) !== MODE.AUTO) {
+          await device.changeMode(MODE.AUTO);
+        }
+      } else {
+        await device.setPower(false);
       }
     });
 }
